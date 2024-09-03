@@ -37,7 +37,6 @@ jobs:
         username: ${{secrets.SSH_USERNAME}}
         key: ${{secrets.SSH_SECRET}}
         script:
-          sudo docker rmi drm1692/ci-cd-user-app
           sudo docker pull drm1692/ci-cd-user-app:latest
           sudo docker stop web-app || true
           sudo docker rm web-app || true
